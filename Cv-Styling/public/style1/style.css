@@ -1,0 +1,226 @@
+[id^="#wrapper"] {
+  /* display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header1 header2 header3"
+    "content1 content2"
+    "content3 content4"
+    "content5 content6"; */
+}
+header {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+
+  width: 100%;
+  background-color: #999999;
+  /* grid-column: 1/2;
+  grid-row: 1/2; */
+}
+header div {
+  display: flex;
+
+  /* height: 150px; */
+
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+figure {
+  height: 7rem;
+  width: 7rem;
+  margin: 1rem 5rem 1rem 1rem;
+}
+header div hgroup {
+  color: red;
+}
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-evenly;
+}
+
+#competencies h3,
+#about h3,
+#experiences h3,
+#education h3,
+#hobbies h3 {
+  border-bottom: 0.1rem solid lightgray;
+}
+
+#about {
+  grid-area: "content1";
+}
+#experiences {
+  grid-area: "content3";
+}
+
+div.experience-details {
+  color: #cbcbcb;
+}
+div.experience h4 {
+  color: red;
+}
+
+.experience h4 {
+}
+.experience div {
+}
+.experience p {
+}
+#competencies {
+  grid-area: "content2";
+}
+#education {
+}
+#hobbies {
+}
+
+h3::before {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: red;
+  border-radius: 50%;
+}
+#competencies {
+}
+#contact h3 {
+  visibility: hidden;
+}
+section#contact {
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  top: 0;
+  height: 6.5rem;
+  margin: 0.7% 0% 0.5% 0.7%;
+  display: flex;
+}
+.contact {
+  font-size: 0.7rem;
+}
+.contact-type {
+  color: white;
+  background-color: red;
+}
+.contact-value {
+  color: red;
+  background-color: black;
+  width: 100%;
+}
+
+#contact dl {
+  display: grid;
+  grid-template-columns: 3rem auto;
+  grid-template-rows: 0.7rem 0.7rem 0.7rem 0.7rem 0.7rem;
+}
+section#contact dl dt.contact-type {
+  color: #fff;
+}
+
+section#contact dl dd.contact-value a {
+  color: #d40000;
+  text-decoration: none;
+}
+
+.skill {
+  margin: 5px;
+  width: 100%;
+  background-color: gray;
+  margin-top: 3px;
+}
+
+.skills {
+  margin: 25px;
+}
+.skills-primary > [data-skill="5"] > span {
+  margin: 3px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  color: white;
+  display: inline-block;
+  width: 50%;
+  background-color: red;
+}
+
+.skills-secondary > [data-skill="5"] > span {
+  margin: 3px;
+  color: white;
+  display: inline-block;
+  width: 50%;
+  background-color: rgb(240, 69, 69);
+}
+[data-skill="1"] > span {
+  margin: 3px;
+  display: inline-block;
+  width: 10%;
+  background-color: red;
+  color: white;
+}
+[data-skill="3"] > span {
+  margin: 3px;
+  display: inline-block;
+  background-color: red;
+  width: 30%;
+  color: white;
+}
+[data-skill="9"] > span {
+  margin: 3px;
+  display: inline-block;
+  background-color: rgb(240, 69, 69);
+  color: white;
+  width: 90%;
+}
+[data-skill="7"] > span {
+  margin: 3px;
+  display: inline-block;
+  background-color: rgb(243, 62, 62);
+  color: white;
+  width: 70%;
+}
+
+@media (max-width: 750px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  figure {
+    align-items: center;
+  }
+  header div hgroup {
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-evenly;
+  }
+
+  section#contact {
+    background-color: red;
+    position: unset;
+
+    top: unset;
+    height: 6.5rem;
+
+    display: flex;
+  }
+
+  #contact h3 {
+    visibility: visible;
+    border-bottom: 0.1rem solid lightgray;
+  }
+}
